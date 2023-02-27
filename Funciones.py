@@ -33,7 +33,7 @@ def mostrar_trabajadores(db):
         cursor.execute(sql)
         registros = cursor.fetchall()
         for registro in registros:
-            print(registro[0],registros[1],registros[2],registro[3])
+            print(registro[0],registro[1],registro[2],registro[3])
     except cx_Oracle.DatabaseError as e:
         error, = e.args
         print("Error en la consulta: ", error.message)
